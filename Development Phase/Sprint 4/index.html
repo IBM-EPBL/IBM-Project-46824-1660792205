@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Kidney Cancer Predictor System</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='vendor/aos/aos.css')}}" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <a href="index.html" class="hero-logo" data-aos="zoom-in"></a>
+      <h1 data-aos="zoom-in">Chronic Kidney Disease Detection</h1>
+      <h2 data-aos="fade-up">Chronic kidney disease includes conditions that damage your kidneys and 
+        decrease their ability to keep you healthy by filtering wastes from your 
+        blood. If kidney disease worsens, wastes can build to high levels in your 
+        blood and make you feel sick. You may develop complications like high blood 
+        pressure, anemia (low blood count), weak bones, poor nutritional health, and nerve damage.
+        Kidney disease also increases your risk of having heart and blood vessel 
+        disease. These problems may happen slowly over a long time. Early detection
+        and treatment can often keep chronic kidney disease from getting worse. 
+        When kidney disease progresses, it may eventually lead to kidney failure, 
+        which requires dialysis or a kidney transplant to maintain life.</h2>
+      <a data-aos="fade-up" href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container">
+
+      <!-- The main logo is shown in mobile version only. The centered nav-logo in nav menu is displayed in desktop view  -->
+      <div class="logo d-block d-lg-none">
+        <a href="index.html"><img src="{{url_for('static',filename='img/logo.png')}}" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul class="nav-inner">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#services">Take a Test</a></li>
+         
+
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        
+
+        
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Take a Test</h2>
+          <p>We care for you</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1" >
+            <form action="/predict" method="POST">
+            <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
+              <h4>Age</h4>
+              <div class="form-group">
+                    <input required type="number" name="age" class="form-control">
+            </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
+              <h4>Blood Pressure</h4>
+              <div class="form-group">
+                    <input required type="number" name="bp" class="form-control">  
+            </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
+              <h4>Sugar(nominal)</h4>
+              <div class="form-group">
+                    <select required name="sugar" class="form-control">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+              </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+              <h4>Pus Cell</h4>
+              <div class="form-group">
+                    <select required name="pc" class="form-control">
+                            <option value="1">Normal</option>
+                            <option value="0">Abnormal</option>
+                        </select>
+              </div>
+            </div>
+            <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+              <h4>Pus Cell Clumps</h4>
+              <div class="form-group">
+                    <select required name="pcc" class="form-control">
+                            <option value="0">NotPresent</option>
+                            <option value="1">Present</option>
+                        </select>
+              </div>
+            </div>
+           
+
+          </div>
+            <div class="col-lg-6 order-2 order-lg-1"> 
+
+                <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="300">
+                            <h4>Sodium(mEq/L)</h4>
+                            <div class="form-group">
+                                    <input required type="number" name="sodium" class="form-control">
+                           </div>
+                </div>
+
+
+              <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up">
+                <h4>Hemoglobin(gms)</h4>
+                <div class="form-group">
+                        <input required type="any" name="hemo" class="form-control">
+                </div>
+              </div>
+              <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="100">
+                <h4>Hypertension</h4>
+                <div class="form-group">
+                        <select required name="htn" class="form-control">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                </div>
+              </div>
+              <div class="icon-box mt-5" data-aos="fade-up" data-aos-delay="200">
+                <h4>Diabetes Mellitus</h4>
+                <div class="form-group">
+                        <select required name="db" class="form-control">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                </div>
+              </div>
+              <br>
+              <input class="btn btn-success" type="submit" value="Get Results">
+            </form>
+
+            </div><!--End of 2nd col-->
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/jquery-sticky/jquery.sticky.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/aos/aos.js')}}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+</body>
+
+</html>

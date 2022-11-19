@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Prediction Details</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/components/buttons/">
+        <style>
+            .header{
+                float:left;
+                color: white;
+                padding: 10px;
+            }
+            .navigation{
+                position: fixed;
+                width: 100%;
+                float: left;
+                background-color: black;
+                opacity: 0.75;
+                height: 100px;     
+            }
+            .navibar{
+                float:right;
+            }
+
+            .navibar li{
+                float: left;
+                padding: 10px;
+                margin: 20px;
+                list-style: none;
+
+            }
+
+            .navibar li a{
+                color: white;
+                font-size: 17px;
+                padding: 15px;
+                transition-duration: 0.5s;
+            }
+
+            .navibar li a:hover{
+                background-color: white;
+                color: black;
+                transition-duration: 0.5s;
+                text-decoration: none;
+                border-radius: 10px;
+            }
+            
+            #secondpage{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                background-image: url(kidney.jpg);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+
+            #secondpage h1{
+                color: white;
+                text-shadow: 0px 0px 10px black;
+                font-size: 35px;
+                /* margin: 175px; */
+                margin-top: 175px;
+                margin-left: 175px;
+                margin-right: 175px;
+                float: left;
+                flex-wrap: wrap;
+
+            }
+
+            .options{
+                font-size: 15px;
+                margin-right: 200px;
+                margin-left: 700px;
+                float: left;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="navigation">
+            <h2 class = "header">Early Detection Of Chronic Kidney Disease</h2>
+            <div>
+                <ul class="navibar">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="indexnew.html">Predict</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+
+        <div id = "secondpage">
+
+            <h1>Enter your details</h1>
+
+            <div class="options">
+                <form method="post">
+
+                <input type="text" name="blood_urea" placeholder="Enter Blood urea level"/><br><br>
+
+                <input type="text" name="blood_glucose" placeholder="Enter Blood glucose level"/><br><br>
+
+                <select name="disease1" id="disease1">
+                    <option value="select">Select anemic or not</option>
+                    <option value="anemic_yes">Anemic</option>
+                    <option value="anemic_no">Not Anemic</option>
+                </select><br><br>
+
+                <select name="disease2" id="disease2">
+                    <option value="select">Select Coronary disease or not</option>
+                    <option value="coronary_yes">Have Coronary disease</option>
+                    <option value="coronary_no">No Coronary disease</option>
+                </select><br><br>
+
+                <select name="disease3" id="disease3">
+                    <option value="select">Select Pus cell or not</option>
+                    <option value="puscell_yes">Have Pus cell</option>
+                    <option value="puscell_no">No Pus cells</option>
+                </select><br><br>
+
+                <select name="disease4" id="disease4">
+                    <option value="select">Select Red Blood Cell level</option>
+                    <option value="normal">Normal Red Blood Cell Level</option>
+                    <option value="abnormal">Abnormal Red Blood Cell Level</option>
+                </select><br><br>
+
+                <select name="disease5" id="disease5">
+                    <option value="select">Select Diabetes Mellitus or not</option>
+                    <option value="diabetes_yes">Have Diabetes Mellitus</option>
+                    <option value="diabetes_no">No Diabetes Mellitus</option>
+                </select><br><br>
+
+                <select name="disease6" id="disease6">
+                    <option value="select">Select Pedal Edema or not</option>
+                    <option value="pedaledema_yes">Have Pedal Edema</option>
+                    <option value="pedaledema_no">No Pedal Edema</option>
+                </select><br><br>
+
+                <button id="predict_btn" type="button" class="btn btn-light"><a href="/web">Predict</a></button>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

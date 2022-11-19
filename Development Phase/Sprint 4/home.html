@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Kidney disease detection</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/components/buttons/">
+        <style>
+            .header{
+                float:left;
+                color: white;
+                padding: 10px;
+            }
+            #homepage{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                background-image: url(kidney.jpg);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+
+            #homepage h1{
+                color: white;
+                text-shadow: 0px 0px 10px black;
+                font-size: 35px;
+                margin-top: 150px;
+                margin-right: 60px;
+                float: left;
+            }
+            .content{
+                color: white;
+                font-size: 15px;
+                margin-top: 50px;
+                margin-right: 100px;
+                margin-left: 700px;
+                float: left;
+                justify-content: center;
+                align-content: center;
+            }
+            .navigation{
+                position: fixed;
+                width: 100%;
+                float: left;
+                background-color: black;
+                opacity: 0.75;
+                height: 100px;     
+            }
+            .navibar{
+                float:right;
+            }
+
+            .navibar li{
+                float: left;
+                padding: 10px;
+                margin: 20px;
+                list-style: none;
+
+            }
+
+            .navibar li a{
+                color: white;
+                font-size: 17px;
+                padding: 15px;
+                transition-duration: 0.5s;
+            }
+
+            .navibar li a:hover{
+                background-color: white;
+                color: black;
+                transition-duration: 0.5s;
+                text-decoration: none;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="navigation">
+            <h2 class = "header">Early Detection Of Chronic Kidney Disease</h2>
+            <div>
+                <ul class="navibar">
+                    <li><a href="#homepage">Home</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+
+        <div id = "homepage">
+            <h1>Early Detection Of Chronic Kidney Disease</h1>          
+            <div class="card">
+                <div class="container">
+                    <div class="content">
+                        Chronic kidney disease includes conditions that damage your kidneys and 
+                        decrease their ability to keep you healthy by filtering wastes from your 
+                        blood. If kidney disease worsens, wastes can build to high levels in your 
+                        blood and make you feel sick. You may develop complications like high blood 
+                        pressure, anemia (low blood count), weak bones, poor nutritional health, and nerve damage.
+                        Kidney disease also increases your risk of having heart and blood vessel 
+                        disease. These problems may happen slowly over a long time. Early detection
+                        and treatment can often keep chronic kidney disease from getting worse. 
+                        When kidney disease progresses, it may eventually lead to kidney failure, 
+                        which requires dialysis or a kidney transplant to maintain life.
+                    </div>  
+                </div>
+              </div>  
+        
+            
+        </div>     
+
+    </body>
+</html>
